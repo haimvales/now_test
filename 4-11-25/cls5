@@ -1,0 +1,40 @@
+class Point:
+    def __init__(self, x=0, y=0):
+        self.x = x
+        self.y = y
+    # Static method → utility: distance between two points
+    @staticmethod
+    def distance(p1, p2):
+        dx = p1.x - p2.x
+        dy = p1.y - p2.y
+        return (dx**2 + dy**2) ** 0.5
+
+class Line:
+    count = 0
+    def __init__(self,a,b):
+        self.a = a
+        self.b = b
+        Line.count += 1
+    def show(self):
+        print(f"{self.a},{self.b}")
+    @classmethod
+    def  how_many(cls):
+        print(F"There are{cls.count}Lins")
+    # @staticmethod
+    # def is_horizontal (line):
+    #     if line.
+
+
+
+    
+    
+    
+        
+
+
+if __name__ == '__main__':
+    p1 = Point(10, 20)
+    p2 = Point(13, 24)
+    d = Point.distance(p1, p2) # Static method
+    print("Distance between points:", d)
+
