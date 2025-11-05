@@ -3,6 +3,7 @@ from weapon import Weapon
 from soldier import Soldier
 from unit import Unit
 from strikeOption import StrikeOption, Tank
+from agent import Agent,Mission
 
 
 
@@ -24,6 +25,10 @@ u2 = Unit("kodkod",s2,s_list2,tank2)
 
 for i in [tank,tank2]:
     i.strike()
+
+a = Agent("2468",3)
+m = Mission("abcdef","sydg",a)
+m.briefing()
 
 
 
